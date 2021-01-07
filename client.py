@@ -1,5 +1,6 @@
 import threading
 import socket
+import getpass
 
 inp = raw_input
 
@@ -10,7 +11,7 @@ port = int(inp("[----] Port to connect to: "))
 nickname = inp("[----] Please select a nickname for the server: ")
 
 if nickname == adminUsrNm:
-	password = inp("[----] Enter Admin password: ")
+	password = getpass.getpass("[----] Enter Admin password: ")
 
 
 addr = (host, port)
